@@ -1,0 +1,78 @@
+<doctype html>
+
+<html>
+	<head>
+		<meta name="description" content="JS board for jamming.">
+		<meta name="keywords" content="js, jam, board, jamboard">
+		<meta name="author" content="Edward Kim">
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/prettify.css">
+
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+
+		<title>jamboardJS</title>
+	</head>
+	<body>
+		<div class="jumbotron text-center bgcolor-green noround medpad">
+			<h1>jamboard<span class="font-black">JS</span></h1>
+			<h2>A musical grid.</h2>
+			<p class="grid">
+			&#9642; &#9642; &#9642; &#9642; &#9642;<br>
+			&#9642; &#9642; &#9642; &#9642; &#9642;<br>
+			&#9642; &#9642; &#9642; &#9642; &#9642;<br>
+			</p>
+		</div>
+
+		<div class="container">
+			<div class="row medpad">
+				<h1>Try it out:</h1>
+				<div class="jamboard jmb-key">
+					<p>[Jamboard will be rendered in this space.]</p>
+				</div>
+				<hr>
+				<h1>Setup:</h1>
+				<p><strong>Important Note</strong>: <a href="http://mohayonao.github.io/timbre.js/" ><code>timbre.js</code></a> is required for jamboardJS.</p>
+				<br>
+				<p><strong>Example:</strong> Setting up a jamboard mapped to the keyboard:</p>
+				<div class="code">
+					<code class="prettyprint">
+						&lt;script src="js/timbre.js"&gt;&lt;/script&gt; <br>
+						&lt;script src="js/jamboard.js"&gt;&lt;/script&gt; <br>
+						&lt;div class="jamboard jmb-key"&gt;&lt;/div&gt;
+					</code>
+				</div>
+			</div>
+		</div>
+		
+		<div class="jumbotron medpad noround bgcolor-darkgrey">
+			<div class="row">
+				<div class="col-4 text-center">
+					<h3>Get jamboardJS:</h3>
+					<p>Download from [GitHub].</p>
+				</div>
+				<div class="col-4 text-center">
+					<h3>Help me out:</h3>
+					<p>Fork from [Github]</p>
+				</div>
+				<div class="col-4 text-center">
+					<h3>Give feedback:</h3>
+					<p>Tweet to <a href="http://twitter.com/eddotman">@eddotman</a>.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-right">
+					<h3>A project by <a href="http://edwardkim.name">Edward Kim</a>.</h3>
+					<br>
+				</div>
+			</div>
+		</div>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/timbre.js"></script>
+	</body>
+</html>
