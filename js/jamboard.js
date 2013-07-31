@@ -2,16 +2,22 @@
 
 function Jamboard() {};
 Jamboard.prototype = {
-	type: null,
+	key: false,
+	w: null,
+	h: null,
 
 	genGrid: function() {
-		$(".jamboard").html("[Jamboard will be rendered here.]");
-	}
+		if (this.key == true) {
+			this.w = 10;
+			this.h = 3;	
+		}
+		$(".jamboard").html("Grid size: " + this.w + "x" + this.h);
 };
 
 
 //Generate Jamboard
 $(document).ready(function() {
 	var jmb1 = new Jamboard();
+	jmb1.key = true;
 	jmb1.genGrid();
 });
