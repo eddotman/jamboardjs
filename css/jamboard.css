@@ -1,0 +1,12 @@
+/* jamboardJS styles */
+
+.jamboard {
+	margin: 10px;
+	padding: 5px;
+}
+
+.jamboard button {
+	border: 2px #000000 solid;
+	background: #cccccc;
+	padding: 0px;
+}

@@ -10,9 +10,7 @@
 
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="css/prettify.css">
-
-		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>
+		<link rel="stylesheet" href="css/jamboard.css">
 
 		<title>jamboardJS</title>
 	</head>
@@ -29,20 +27,32 @@
 
 		<div class="container">
 			<div class="row medpad">
-				<h1>Try it out:</h1>
+				<h1>Try it:</h1>
 				<div class="jamboard jmb-key">
 					<p>[Jamboard will be rendered in this space.]</p>
 				</div>
 				<hr>
 				<h1>Setup:</h1>
-				<p><strong>Important Note</strong>: <a href="http://mohayonao.github.io/timbre.js/" ><code>timbre.js</code></a> is required for jamboardJS.</p>
+				<p><strong>Important Note</strong>: <a href="http://mohayonao.github.io/timbre.js/" ><code>timbre.js</code></a> and JQuery are required for jamboardJS.</p>
 				<br>
 				<p><strong>Example:</strong> Setting up a jamboard mapped to the keyboard.</p>
+				<p>HTML:</p>
 				<div class="code">
 					<code class="prettyprint">
 						&lt;script src="js/timbre.js"&gt;&lt;/script&gt; <br>
+						&lt;script src="js/jquery-1.9.1.js"&gt;&lt;/script&gt; <br>
 						&lt;script src="js/jamboard.js"&gt;&lt;/script&gt; <br>
 						&lt;div class="jamboard jmb-key"&gt;&lt;/div&gt;
+					</code>
+				</div>
+				<br>
+				<p>JS:</p>
+				<div class="code">
+					<code class="prettyprint">
+						$(document).ready(function() { <br>
+							var jmb1 = new Jamboard(); <br>
+							jmb1.genGrid(); <br>
+						});
 					</code>
 				</div>
 			</div>
@@ -51,29 +61,32 @@
 		<div class="jumbotron medpad noround bgcolor-darkgrey">
 			<div class="row">
 				<div class="col-4 text-center">
-					<h3>Get jamboardJS:</h3>
-					<p>Download from [GitHub].</p>
+					<p>Download</p> 
+					<p>@<a href="https://github.com/eddotman/jamboardjs/archive/master.zip">GitHub</a></p>
 				</div>
 				<div class="col-4 text-center">
-					<h3>Help me out:</h3>
-					<p>Fork from [Github]</p>
+					<p>Fork</p> 
+					<p>@<a href="https://github.com/eddotman/jamboardjs/">Github</a></p>
 				</div>
 				<div class="col-4 text-center">
-					<h3>Give feedback:</h3>
-					<p>Tweet to <a href="http://twitter.com/eddotman">@eddotman</a>.</p>
+					<p>Tweet</p>
+					<p>@<a href="http://twitter.com/eddotman">eddotman</a></p>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-12 text-right">
-					<h3>A project by <a href="http://edwardkim.name">Edward Kim</a>.</h3>
+				<div class="col-12 text-center">
+					<p>A project by <a href="http://edwardkim.name">Edward Kim</a>.</p>
 					<br>
 				</div>
 			</div>
 		</div>
 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/timbre.js"></script>
+	<script src="js/jamboard.js"></script>
 	</body>
 </html>

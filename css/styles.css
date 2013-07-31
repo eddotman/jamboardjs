@@ -4,44 +4,32 @@ body {background: #ffffff;}
 html, body, p, h1, h2, h3 {font-family:"Autour One", "arial"; font-weight:300;}
 
 @media (min-width: 1px) and (max-width: 320px) {
-	p, li, input[type="text"] {font-size:75%;}
+	code, p, li, input[type="text"] {font-size:65%;}
 	h2, h3 {font-size: 80%; margin: 2px 0;}
 
-	.hugepad {padding: 80px 20px;}
-	.medpad {padding: 30px 20px;}
+	.jumbotron {font-size:80%;}
+	.medpad {padding: 30px 10px;}
 }
 
 @media (min-width: 321px) and (max-width: 600px) {
-	p, li,  input[type="text"] {font-size:85%;}
+	code, p, li,  input[type="text"] {font-size:85%;}
 	h2, h3 {font-size: 90%;margin: 5px 0;}
 
-	.hugepad {padding: 120px 20px;}
+	.jumbotron {font-size:90%;}
 	.medpad {padding: 50px 20px;}
 }
 
 @media (min-width: 601px) {
-	p, li,  input[type="text"] {font-size:100%;}
+	code, p, li,  input[type="text"] {font-size:100%;}
 	h2, h3, {font-size:120%;}
 
-	.hugepad {padding: 220px 20px;}
 	.medpad {padding: 120px 20px;}
 }
 
 .code{background:#000000; width:100%; padding: 20px;}
-
 .noround {border-radius:0;}
 .grid {line-height: .1em; margin: 0; padding: 0; font-size: 20px;}
-
+.font-black {color:#000000;}
 .bgcolor-darkgrey {background: #343434; color: #ffffff;}
 .bgcolor-green {background: #27ae60; color: #ffffff;}
-.bgcolor-white {background: #ffffff; color: #000000;}
-.bgcolor-black {background: #000000; color: #ffffff;}
 
-.font-black {color:#000000;}
-
-textarea {resize: none;width: 100%; padding: 10px;}
-input {width: 100%; border: 1px black solid;}
-input[type="text"] {width: 100%; padding: 8px; border: 1px black solid;}
-button {margin:15px;}
-
-.centred {margin: 0 auto;}
