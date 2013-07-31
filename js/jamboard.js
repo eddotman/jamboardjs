@@ -9,9 +9,12 @@ Jamboard.prototype = {
 	genGrid: function() {
 		if (this.key == true) {
 			this.w = 10;
-			this.h = 3;	
+			this.h = 3;		
 		}
-		$(".jamboard").html("Grid size: " + this.w + "x" + this.h);
+
+		$(".jamboard").html("[JAMBOARD RENDERED HERE] <br>");
+		$(".jamboard").append("Grid size: " + this.w + "x" + this.h);
+	}		
 };
 
 
