@@ -19,8 +19,8 @@ Jamboard.prototype = {
 			$(".jamboard").append("<br>");
 		}
 
-		$(".jamboard").append("<br><p>Grid size: " + this.w + "x" + this.h + "</p>");
-		$(".jamboard").append("<br><p>(jamboard currently not functional)</p>");
+		$(".jamboard").append("<br><p>Click jamboard buttons for beats. Use your keyboard to jam.</p>");
+		$(".jamboard").append("<p><em>(jamboard currently not functional)</em></p>");
 	}		
 };
 
