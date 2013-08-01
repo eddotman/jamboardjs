@@ -12,8 +12,15 @@ Jamboard.prototype = {
 			this.h = 3;		
 		}
 
-		$(".jamboard").html("[JAMBOARD RENDERED HERE] <br>");
-		$(".jamboard").append("Grid size: " + this.w + "x" + this.h);
+		for (var i=0 ; i < this.h; i++) { 
+			for (var j=0; j < this.w; j++) {
+				$(".jamboard").append("<button/>");	
+			}
+			$(".jamboard").append("<br>");
+		}
+
+		$(".jamboard").append("<br><p>Grid size: " + this.w + "x" + this.h + "</p>");
+		$(".jamboard").append("<br><p>(jamboard currently not functional)</p>");
 	}		
 };
 
