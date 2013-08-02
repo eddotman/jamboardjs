@@ -28,7 +28,7 @@
 		<div class="container">
 			<div class="row">
 				<h1>Try it:</h1>
-				<div class="jamboard jmb-key"></div>
+				<div id="jmb1" class="jamboard jmb-key"></div>
 				<hr>
 				<h1>Setup:</h1>
 				<p><strong>Important Note</strong>: <a href="http://mohayonao.github.io/timbre.js/" ><code>timbre.js</code></a> and JQuery are required for jamboardJS.</p>
@@ -40,17 +40,41 @@
 						&lt;script src="js/timbre.js"&gt;&lt;/script&gt; <br>
 						&lt;script src="js/jquery-1.9.1.js"&gt;&lt;/script&gt; <br>
 						&lt;script src="js/jamboard.js"&gt;&lt;/script&gt; <br>
-						&lt;div class="jamboard jmb-key"&gt;&lt;/div&gt;
+						&lt;div id="jmb1" class="jamboard jmb-key"&gt;&lt;/div&gt;
 					</code>
 				</div>
 				<br>
 				<p>JS:</p>
 				<div class="code">
 					<code class="prettyprint">
-						$(document).ready(function() { <br>
-							var jmb1 = new Jamboard(); <br>
-							jmb1.genGrid(); <br>
-						});
+						var jmb1 = new Jamboard(); <br>
+						jmb1.name = "jmb1"; <br>
+						jmb1.key = true; <br>
+						jmb1.activate(); 	
+					</code>
+				</div>
+				<br>
+				<br>
+				<p><strong>Example:</strong> Setting up an 8x8 jamboard.</p>
+				<div id="jmb2" class="jamboard"></div>
+				<p>HTML:</p>
+				<div class="code">
+					<code class="prettyprint">
+						&lt;script src="js/timbre.js"&gt;&lt;/script&gt; <br>
+						&lt;script src="js/jquery-1.9.1.js"&gt;&lt;/script&gt; <br>
+						&lt;script src="js/jamboard.js"&gt;&lt;/script&gt; <br>
+						&lt;div id="jmb2" class="jamboard"&gt;&lt;/div&gt;
+					</code>
+				</div>
+				<br>
+				<p>JS:</p>
+				<div class="code">
+					<code class="prettyprint">
+							var jmb2 = new Jamboard(); <br>
+							jmb2.name = "jmb2"; <br>
+							jmb2.w = 8; <br>
+							jmb2.h = 8; <br>
+							jmb2.activate();
 					</code>
 				</div>
 				<br>

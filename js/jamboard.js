@@ -3,43 +3,54 @@
 function Jamboard() {};
 Jamboard.prototype = {
 	key: false,
-	name: null,
+	nm: null,
 	w: null,
 	h: null,
 
-	genGrid: function() {
+	activate: function() {
 		if (this.key == true) {
 			this.w = 10;
 			this.h = 3;		
 		}
 
+		var freqCount = 300;
+
 		for (var i=0 ; i < this.h; i++) { 
 			for (var j=0; j < this.w; j++) {
-				$(".jamboard").append("<button class='jmb-btn' id='" + i + "-" + j + "' />");	
+				var freqCount = freqCount + ((i+1)+(j+1))*10;
+				$("#" + this.nm).append("<button freq='" + freqCount + "' class='jmb-btn' id='" + this.nm + "-" + i + "-" + j + "' />");	
 			}
-			$(".jamboard").append("<br>");
+			$("#" + this.nm).append("<br>");
 		}
-
-		$(".jamboard").append("<br><p>Click jamboard buttons for beats. Use your keyboard to jam.</p>");
-		$(".jamboard").append("<p><em>(jamboard currently not functional)</em></p>");
-	},
-
-	activate: function () {
+	
 		$(".jmb-btn").click(function (event) {
 			event.preventDefault();
 			var id = event.target.id;
-			//$("#" + id).css("background-color", "#ff5555");
-			$("#" + id).toggleClass("active");
+			$("#" + this.nm).append(id);
+			var fq = parseFloat($("#" + id).attr("freq"));
+			var sound = T("sin", {freq:fq, mul:0.5});
+
+			T("perc", {r:500}, sound).on("ended", function() {
+			  this.pause();
+			}).bang().play();
 		});
-	} 
+	 }
 };
 
 
 //Generate Jamboard
 $(document).ready(function() {
 	var jmb1 = new Jamboard();
-	jmb1.name = "jmb1";
+	jmb1.nm = "jmb1";
 	jmb1.key = true;
-	jmb1.genGrid();
+	
+
+	var jmb2 = new Jamboard();
+	jmb2.nm = "jmb2";
+	jmb2.w = 8;
+	jmb2.h = 8;
+
+	jmb2.activate();
 	jmb1.activate();
+	
 });
