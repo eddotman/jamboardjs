@@ -2,17 +2,11 @@
 
 function Jamboard() {};
 Jamboard.prototype = {
-	key: false,
 	nm: null,
 	w: null,
 	h: null,
 
 	activate: function() {
-		if (this.key == true) {
-			this.w = 10;
-			this.h = 3;		
-		}
-
 		var freqCount = 300;
 
 		for (var i=0 ; i < this.h; i++) { 
@@ -36,21 +30,3 @@ Jamboard.prototype = {
 		});
 	 }
 };
-
-
-//Generate Jamboard
-$(document).ready(function() {
-	var jmb1 = new Jamboard();
-	jmb1.nm = "jmb1";
-	jmb1.key = true;
-	
-
-	var jmb2 = new Jamboard();
-	jmb2.nm = "jmb2";
-	jmb2.w = 8;
-	jmb2.h = 8;
-
-	jmb2.activate();
-	jmb1.activate();
-	
-});
